@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#a35e4f" />
+    <meta
+      name="description"
+      content="Orçamentos, checklists e prospecção para freelancers."
+    />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>LF Business</title>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="mark">LF.</span>
+          <div>
+            <strong>LF Business</strong><small>Seu negócio em movimento</small>
+          </div>
+        </div>
+        <nav aria-label="Navegação">
+          <button class="nav active" data-page="home">
+            ◫ <span>Visão geral</span></button
+          ><button class="nav" data-page="budget">
+            ▤ <span>Orçamentos</span></button
+          ><button class="nav" data-page="tasks">
+            ☑ <span>Checklists</span></button
+          ><button class="nav" data-page="leads">
+            ◇ <span>Prospecção</span></button
+          ><button class="nav" data-page="settings">
+            ⚙ <span>Seus dados</span>
+          </button>
+        </nav>
+        <p class="side-note">
+          Dados salvos neste dispositivo.<br />Funciona offline após a primeira
+          visita.
+        </p>
+      </aside>
+      <div class="main">
+        <header class="top">
+          <div>
+            <small>FERRAMENTAS PARA FREELANCER</small>
+            <h1 id="page-title">Visão geral</h1>
+          </div>
+          <div class="status" id="status">● Salvo no dispositivo</div>
+        </header>
+        <main id="content" tabindex="-1"></main>
+        <footer>
+          LF Business · Desenvolvido para organizar projetos e oportunidades.
+        </footer>
+      </div>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
