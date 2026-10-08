@@ -479,7 +479,7 @@ function openDialog({ title, body, form, id = "", submit = "Salvar", wide = fals
     ${form ? `<footer class="actions"><button class="btn" type="submit">${submit}</button><button type="button" class="btn secondary" data-action="close-dialog">Cancelar</button></footer>` : ""}
   </form>`;
   d.showModal();
-  d.querySelector("input, select, textarea")?.focus();
+  (d.querySelector("input, select, textarea") || d.querySelector(".dialog-body .btn"))?.focus();
 }
 
 function closeDialog() {
