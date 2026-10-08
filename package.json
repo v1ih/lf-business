@@ -1,0 +1,14 @@
+{
+  "name": "lf-business",
+  "version": "2.0.0",
+  "private": true,
+  "description": "PWA de orçamentos, propostas, checklists e prospecção para freelancers.",
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes http-server -p 8088 -c-1",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
