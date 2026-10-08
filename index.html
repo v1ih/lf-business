@@ -2,46 +2,53 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1,viewport-fit=cover"
-    />
-    <meta name="theme-color" content="#a35e4f" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="theme-color" content="#302623" />
     <meta
       name="description"
-      content="Orçamentos, checklists e prospecção para freelancers."
+      content="Orçamentos, propostas, checklists e prospecção de clientes para freelancers. Funciona offline."
     />
+    <meta property="og:title" content="LF Business" />
+    <meta
+      property="og:description"
+      content="Orçamentos, propostas e prospecção de clientes para freelancers."
+    />
+    <meta property="og:image" content="./icons/icon-512.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="LF Business" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
     <link rel="stylesheet" href="./style.css" />
     <title>LF Business</title>
   </head>
   <body>
+    <a class="skip" href="#content">Pular para o conteúdo</a>
     <div class="app">
       <aside class="sidebar">
         <div class="brand">
-          <span class="mark">LF.</span>
-          <div>
-            <strong>LF Business</strong><small>Seu negócio em movimento</small>
-          </div>
+          <span class="mark" aria-hidden="true">LF.</span>
+          <div><strong>LF Business</strong><small>Seu negócio em movimento</small></div>
         </div>
-        <nav aria-label="Navegação">
-          <button class="nav active" data-page="home">
-            ◫ <span>Visão geral</span></button
-          ><button class="nav" data-page="budget">
-            ▤ <span>Orçamentos</span></button
-          ><button class="nav" data-page="tasks">
-            ☑ <span>Checklists</span></button
-          ><button class="nav" data-page="leads">
-            ◇ <span>Prospecção</span></button
-          ><button class="nav" data-page="settings">
-            ⚙ <span>Seus dados</span>
+        <nav aria-label="Navegação principal">
+          <button class="nav" data-page="home">
+            <span aria-hidden="true">◫</span> <span>Visão geral</span>
+          </button>
+          <button class="nav" data-page="budget">
+            <span aria-hidden="true">▤</span> <span>Orçamentos</span>
+          </button>
+          <button class="nav" data-page="tasks">
+            <span aria-hidden="true">☑</span> <span>Checklists</span>
+          </button>
+          <button class="nav" data-page="leads">
+            <span aria-hidden="true">◇</span> <span>Prospecção</span>
+          </button>
+          <button class="nav" data-page="settings">
+            <span aria-hidden="true">⚙</span> <span>Seus dados</span>
           </button>
         </nav>
-        <p class="side-note">
-          Dados salvos neste dispositivo.<br />Funciona offline após a primeira
-          visita.
-        </p>
+        <p class="side-note">Dados salvos neste aparelho.<br />Funciona offline após a primeira visita.</p>
       </aside>
       <div class="main">
         <header class="top">
@@ -49,15 +56,19 @@
             <small>FERRAMENTAS PARA FREELANCER</small>
             <h1 id="page-title">Visão geral</h1>
           </div>
-          <div class="status" id="status">● Salvo no dispositivo</div>
+          <div class="status" id="status">● Salvo no aparelho</div>
         </header>
         <main id="content" tabindex="-1"></main>
         <footer>
-          LF Business · Desenvolvido para organizar projetos e oportunidades.
+          LF Business · Feito por
+          <a href="https://github.com/v1ih/lf-business" target="_blank" rel="noopener">Lavínia Ferraz</a>
         </footer>
       </div>
     </div>
+    <dialog id="dialog"></dialog>
+    <div id="print" aria-hidden="true"></div>
     <div id="toast" role="status" aria-live="polite"></div>
-    <script src="./app.js" defer></script>
+    <noscript>O LF Business precisa de JavaScript para funcionar.</noscript>
+    <script type="module" src="./js/app.js"></script>
   </body>
 </html>

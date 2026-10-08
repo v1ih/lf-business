@@ -2,12 +2,12 @@
   "id": "./",
   "name": "LF Business — Orçamentos e Prospecção",
   "short_name": "LF Business",
-  "description": "Calcule orçamentos, acompanhe checklists e organize sua prospecção.",
+  "description": "Orçamentos, propostas, checklists e prospecção de clientes para freelancers.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f9f5f0",
-  "theme_color": "#a35e4f",
+  "theme_color": "#302623",
   "lang": "pt-BR",
   "icons": [
     {
@@ -21,6 +21,34 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "business",
+    "productivity"
+  ],
+  "shortcuts": [
+    {
+      "name": "Novo orçamento",
+      "short_name": "Orçamento",
+      "url": "./#budget",
+      "icons": [
+        {
+          "src": "./icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Prospecção",
+      "short_name": "Prospecção",
+      "url": "./#leads",
+      "icons": [
+        {
+          "src": "./icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }
