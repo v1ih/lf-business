@@ -1,5 +1,7 @@
 # LF Business — MVP PWA
 
+**Online:** https://lf-business-lake.vercel.app
+
 PWA independente e sem backend, com calculadora de orçamentos, histórico, checklists persistentes e funil de prospecção. Interface em português e layout responsivo.
 
 ## Rodar localmente
@@ -14,7 +16,13 @@ Acesse `http://localhost:8080` e teste. No celular, para instalar via PWA, publi
 
 ## Publicação na Vercel
 
-Crie um novo projeto, importando esta pasta como repositório GitHub separado ou enviando-a à sua hospedagem de arquivos estáticos. Framework Preset: **Other**. Sem comando de build; diretório de saída: a raiz deste projeto.
+O projeto está publicado na Vercel como site estático (Framework Preset: **Other**, sem comando de build, diretório de saída = raiz). Para publicar uma nova versão:
+
+1. Aumente a versão do cache em `sw.js` (`lf-business-v1` → `lf-business-v2`), senão quem já instalou continua vendo a versão antiga.
+2. Faça commit e push.
+3. Rode `vercel deploy --prod` na raiz do projeto.
+
+A pasta `.vercel/` é local e nunca deve ser commitada (já está no `.gitignore`).
 
 ## Privacidade
 
